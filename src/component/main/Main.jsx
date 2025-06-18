@@ -2,6 +2,7 @@ import '../main/Main.css'
 import {assets} from '../../assets/assets'
 
 const Main = () => {
+  // const apiKey = "AIzaSyCl3zhFPve7O4AyaI7MKtJHcCetmIKnmqE";
   return (
     <div className='main'>
       <div className="nav">
@@ -28,6 +29,7 @@ const Main = () => {
           <div className="card">
             <p>Brainstorm team bonding activities for our work retreat</p>
             <img src={assets.message_icon} alt="" />
+            
           </div>
 
           <div className="card">
@@ -35,6 +37,20 @@ const Main = () => {
             <img src={assets.code_icon} alt="" />
           </div>
 
+        </div>
+        {/*  */}
+        <div className="main-bottom">
+          <div className="search-box">
+            <input type="text" placeholder='Enter a prompt here'/>
+            <div>
+              <img src={assets.gallery_icon} alt="" />
+              <img src={assets.mic_icon} alt="" />
+              <img src={assets.send_icon} alt="" />
+            </div>
+          </div>
+            <p className='bottom-info'>
+              Gemini may display inaccurate info, including about people, so double-check its responses. Your privacy and Gemini Apps
+            </p>
         </div>
       </div>
 
