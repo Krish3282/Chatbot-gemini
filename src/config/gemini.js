@@ -1,19 +1,25 @@
-
+// config/gemini.js
 import { GoogleGenAI } from "@google/genai";
-
-const ai = new GoogleGenAI({
-  apiKey: "AIzaSyCl3zhFPve7O4AyaI7MKtJHcCetmIKnmqE",
-});
-
+//  AIzaSyAmA9AEEk3OKCmOFkk2Cj-vtuSON2MKpWg
+const ai = new GoogleGenAI({ apiKey: "" });
 async function main(prompt) {
   const response = await ai.models.generateContent({
-    model: "gemini-2.0-flash",
-    contents: prompt,
-    config: {
-      maxOutputTokens: 500,
-      temperature: 0.1,
-    },
+    model: "gemini-2.5-flash",
+    contents:  [
+  {
+    "role": "user",
+    "parts": [
+      {
+        "text": prompt 
+      }
+    ]
+  }
+]
   });
   console.log(response.text);
+  return response.text;
 }
+
 export default main;
+
+
