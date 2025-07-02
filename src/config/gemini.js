@@ -1,7 +1,10 @@
 // config/gemini.js
 import { GoogleGenAI } from "@google/genai";
-//  AIzaSyAmA9AEEk3OKCmOFkk2Cj-vtuSON2MKpWg
-const ai = new GoogleGenAI({ apiKey: "" });
+// AIzaSyCl3zhFPve7O4AyaI7MKtJHcCetmIKnmqE
+const ai = new GoogleGenAI({
+  apiKey: "",
+});
+
 async function main(prompt) {
   const response = await ai.models.generateContent({
     model: "gemini-2.5-flash",
@@ -21,5 +24,3 @@ async function main(prompt) {
 }
 
 export default main;
-
-
